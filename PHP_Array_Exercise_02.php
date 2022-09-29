@@ -29,8 +29,28 @@
 	
 ?>
 
-
 //Second Problem
+<?php
+
+  print("Input the number of elements to be stored in the array:\n");
+  $numElements = readline();
+  
+  $arr = array(0);
+  
+  for($i = 0; $i < $numElements; $i++){
+    array_push($arr, readline());
+  }
+  
+  array_shift($arr);
+  $frequency = array_count_values($arr);
+  foreach ($frequency as $value => $count) {
+    print("\n" . $value . " occurs " . $count . " times");
+  }
+
+?>
+
+
+//Third Problem
 <?php
 
   print("Input the number of elements to be stored in the array:");
@@ -67,25 +87,4 @@
 	  print($oddArr[$i] . " ");
 	}
 	
-?>
-
-
-//Third Problem
-<?php
-
-  print("Input the number of elements to be stored in the array:\n");
-  $numElements = readline();
-  
-  $arr = array(0);
-  
-  for($i = 0; $i < $numElements; $i++){
-    array_push($arr, readline());
-  }
-  
-  array_shift($arr);
-  $frequency = array_count_values($arr);
-  foreach ($frequency as $value => $count) {
-    print("\n" . $value . " occurs " . $count . " times");
-  }
-
 ?>
